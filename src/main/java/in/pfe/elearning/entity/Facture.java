@@ -16,6 +16,6 @@ public class Facture {
     private String date;
     private String userId;
     private String clientId;
-    private List<String> products;
+    private List<FactureItem> products;
     private double total;
 }
