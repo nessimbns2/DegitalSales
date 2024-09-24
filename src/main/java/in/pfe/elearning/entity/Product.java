@@ -26,5 +26,5 @@ public class Product {
     private int quantity;   
     @DBRef
     private Category category;
-    private String idUser;
+    private String userId;
 }

@@ -34,4 +34,7 @@ public class ProductService {
     public void deleteProduct(String id) {
         productRepository.deleteById(id);
     }
+public List<Product> getProductsByIdUser(String userId) {
+    return productRepository.findByUserId(userId);
+}
 }

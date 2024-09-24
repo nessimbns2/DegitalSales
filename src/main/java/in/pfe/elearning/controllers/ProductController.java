@@ -42,4 +42,9 @@ public class ProductController {
         productService.deleteProduct(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/get-by-user/{userId}")
+    public List<Product> getProductsByIdUser(@PathVariable String userId) {
+        return productService.getProductsByIdUser(userId);
+    }
 }
