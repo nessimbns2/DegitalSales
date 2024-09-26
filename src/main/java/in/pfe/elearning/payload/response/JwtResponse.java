@@ -2,8 +2,6 @@ package in.pfe.elearning.payload.response;
 
 import java.util.List;
 
-import org.bson.types.ObjectId;
-
 public class JwtResponse {
 	private String token;
 	private String type = "Bearer";
