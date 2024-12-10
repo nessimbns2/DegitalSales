@@ -15,7 +15,7 @@ import in.pfe.elearning.services.UserService;
 public class UserController {
 
         @Autowired
-        private UserService userService;
+        private UserService userService;    
 
         @PostMapping("/{userID}/clients")
         public ResponseEntity<String> addClient(@PathVariable String userID, @RequestBody Client client) {

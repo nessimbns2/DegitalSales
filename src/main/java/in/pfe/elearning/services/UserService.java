@@ -33,6 +33,11 @@ public class UserService {
         } else {
             User user = userOptional.get();
             List<Client> clients = user.getClients();
+            for (Client c : clients) {
+                if (c.getTel().equals(client.getTel())) {
+                    throw new RuntimeException("Client already exists with the phone number: " + client.getTel());
+                }
+            }
             client.setId(UUID.randomUUID().toString());
             clients.add(client);
             userRepository.save(user);

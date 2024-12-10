@@ -15,13 +15,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-@Document(collection = "Product")
+@Document(collection = "Products")
 public class Product {
     @Id
     private String id;
     private String name;
     private String image;
-    private String description;
     private double price;
     private int quantity;   
     @DBRef

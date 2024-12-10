@@ -11,8 +11,9 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-@Document(collection = "Category")
+@Document(collection = "Categorys")
 public class Category {
     private String id;
     private String name;
+    private String userId;
 }

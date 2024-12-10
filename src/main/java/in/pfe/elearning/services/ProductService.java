@@ -34,7 +34,14 @@ public class ProductService {
     public void deleteProduct(String id) {
         productRepository.deleteById(id);
     }
-public List<Product> getProductsByIdUser(String userId) {
-    return productRepository.findByUserId(userId);
-}
+
+    public List<Product> getProductsByIdUser(String userId) {
+        return productRepository.findByUserId(userId);
+    }
+
+    public void deleteProductsByIds(List<String> ids) {
+        for (String id : ids) {
+            productRepository.deleteById(id);
+        }
+    }
 }

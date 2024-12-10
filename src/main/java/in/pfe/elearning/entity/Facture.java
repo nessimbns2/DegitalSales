@@ -11,11 +11,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Facture {
+public class Facture {  
     private String id;
     private String date;
     private String userId;
     private String clientId;
     private List<FactureItem> products;
     private double total;
+    private boolean buy;
 }
