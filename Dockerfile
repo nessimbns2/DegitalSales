@@ -12,7 +12,7 @@ RUN mvn clean package -DskipTests
 
 FROM openjdk:17-jdk-slim
 WORKDIR /app
-COPY --from=build /app/target/elearning-0.0.1-SNAPSHOT.jar /app/target/elearning-0.0.1-SNAPSHOT.jar
+COPY --from=build /app/target/elearning-0.0.1-SNAPSHOT.jar.original app.jar
 
 EXPOSE 8080
 ENTRYPOINT [ "JAVA", "-jar", "/DigitalSales/target/elearning-0.0.1-SNAPSHOT.jar" ]
