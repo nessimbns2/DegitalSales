@@ -1,13 +1,6 @@
 # Utiliser une image de base avec OpenJDK 17
 FROM maven:3.8.3-openjdk-17 AS build
 
-
-# Installer Maven
-RUN apt-get update && apt-get install -y maven
-
-# Définir le répertoire de travail à l'intérieur du conteneur
-WORKDIR /app
-
 # Copier le fichier pom.xml et les fichiers source dans le répertoire de travail
 COPY . .
 
